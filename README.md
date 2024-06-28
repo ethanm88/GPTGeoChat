@@ -74,14 +74,14 @@ The location annotations pertain to the location information revealed in *any pr
 
 `none` and `exact` values are assigned to `most_specific_location` if no location information or either the `exact_location_name` or `longitude` and `latitude` have been revealed, respectively.
 
-## Moderation Experiments 🧪
+## Moderation Experiments 🧑‍🔬
 ### Processed Data Files 🗂️
 We provide moderation decisions for all baseline, finetuned, and prompted agents in `moderation_decisions_baselines`, `moderation_decisions_finetuned`, and `moderation_decisions_prompted`, respectively. The important keys are:
 * ``question_id``: instance from the test set of the form `{id}_{turn_no}`
 * ``predicted``: agent prediction about whether or not to moderate response (`Yes`|`No`) 
 * ``rationale``: reason given for moderation decision (only for prompted agents)
 
-### Running Experiments 🧑‍🔬
+### Running Experiments 🧪
 Follow the following steps to generate experimental results from the paper:
 1. Clone the repository:
 ```bash 
@@ -114,6 +114,6 @@ export GEOAPIFY_API_KEY={your_api_key}
 ```
 
 ## Benchmark Your Agents 🚀
-Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{agent_name}_granularity={granularity}`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the geocoding-distance-error as discussed previously.
+Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{custom_agent_name}_granularity={granularity}.jsonl`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the geocoding-distance-error as discussed previously.
 
 ## Citation ✍️
