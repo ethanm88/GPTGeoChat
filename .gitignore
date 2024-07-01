@@ -1,7 +1,8 @@
 # Ignore gptgeochat directory
 gptgeochat/
 
-
+# Ignore moderation_decisions_ground_truth directory
+moderation_decisions_ground_truth/
 
 # Ignore human.zip file
 human.zip

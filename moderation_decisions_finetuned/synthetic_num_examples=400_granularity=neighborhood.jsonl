@@ -419,7 +419,7 @@
 {"question_id": "380393797_1", "predicted": "Yes"}
 {"question_id": "380393797_2", "predicted": "No"}
 {"question_id": "380393797_3", "predicted": "No"}
-{"question_id": "380393797_4", "predicted": " Yes"}
+{"question_id": "380393797_4", "predicted": "Yes"}
 {"question_id": "380393797_5", "predicted": "No"}
 {"question_id": "380393797_6", "predicted": "No"}
 {"question_id": "380393797_7", "predicted": "Yes"}
@@ -680,7 +680,7 @@
 {"question_id": "1275445393_8", "predicted": "Yes"}
 {"question_id": "2168318911_1", "predicted": "No"}
 {"question_id": "2168318911_2", "predicted": "No"}
-{"question_id": "2168318911_3", "predicted": " Yes"}
+{"question_id": "2168318911_3", "predicted": "Yes"}
 {"question_id": "2168318911_4", "predicted": "No"}
 {"question_id": "2168318911_5", "predicted": "No"}
 {"question_id": "2168318911_6", "predicted": "No"}
@@ -917,7 +917,7 @@
 {"question_id": "601709189_5", "predicted": "Yes"}
 {"question_id": "388032190_1", "predicted": "No"}
 {"question_id": "388032190_2", "predicted": "No"}
-{"question_id": "388032190_3", "predicted": "Ubud"}
+{"question_id": "388032190_3", "predicted": "No"}
 {"question_id": "388032190_4", "predicted": "No"}
 {"question_id": "388032190_5", "predicted": "Yes"}
 {"question_id": "1218773557_1", "predicted": "No"}
@@ -1934,7 +1934,7 @@
 {"question_id": "435513232_3", "predicted": "No"}
 {"question_id": "435513232_4", "predicted": "No"}
 {"question_id": "435513232_5", "predicted": "No"}
-{"question_id": "435513232_6", "predicted": "Stare Miasto"}
+{"question_id": "435513232_6", "predicted": "No"}
 {"question_id": "435513232_7", "predicted": "Yes"}
 {"question_id": "435513232_8", "predicted": "Yes"}
 {"question_id": "2372014457_1", "predicted": "Yes"}

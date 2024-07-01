@@ -4,8 +4,8 @@ Repository for "Granular Privacy Control for Geolocation with Vision Language Mo
 ## Main Datasets 🗎
 ### Downloads and Directory Structure ⬇️
 The full human annotated GPTGeoChat and AI-generated GPTGeoChat<sub>Synthetic</sub> are available for download at the following links:
-* GPTGeoChat: https://www.mediafire.com/file/rcr1wsmi70b01ah/human.zip/file
-* GPTGeoChat<sub>Synthetic</sub>: https://www.mediafire.com/file/chvqvde6xm7ofqa/synthetic.zip/file
+* [GPTGeoChat (506 MB)](https://www.mediafire.com/file/rcr1wsmi70b01ah/human.zip/file)
+* [GPTGeoChat<sub>Synthetic</sub> (227 MB)](https://www.mediafire.com/file/chvqvde6xm7ofqa/synthetic.zip/file)
 
 The directory structure of GPTGeoChat:
 ```
@@ -101,17 +101,19 @@ python generate_ground_truths.py
 ```
 5. Run Experiments
 ```bash
-python generate_eval_metrics.py [--basic_metrics] [--privacy_utility] [--geocoding_distance] [--all] [--recompute_geocoding_results]
+python generate_eval_metrics.py [--basic_metrics] [--privacy_utility] [--geocoding_distance] [--all] [--recompute_geocoding_results] [--agents]
 ```
 Experiment Options:
-* ``--all``: run all of the following experiments
+* ``--all``: run all three experiments
 * ``--basic_metrics``: calculate the precision, recall, f1-scores, and f1-score stderrs for binary moderation task. This data was used to generate Figure 3.
-* ``--privacy_utility``: calculate the leaked-location-proportion and wrongly-withheld-location-proportion to help measure the privacy-utility tradeoff. This data was used to generate Figure 4.
-* ``--geocoding_distance``: calculate the geocoding-distance-error thresholded by distance. This data was used to generate Figure 5. \
-**Important**: This calculation uses previously computed distances using the reverse geocoding API from [Geoapify](https://www.geoapify.com/reverse-geocoding-api/). These files are saved under ``api_distance_responses``. If you want to recompute these, use the ``--recompute_geocoding_results`` flag. In this case you will need to generate an API key and set the environment variable:
+* ``--privacy_utility``: calculate the ``leaked-location-proportion`` and ``wrongly-withheld-location-proportion`` to help measure the privacy-utility tradeoff. This data was used to generate Figure 4.
+* ``--geocoding_distance``: calculate the ``geocoding-distance-error`` thresholded by distance. This data was used to generate Figure 5. \
+**Important**: This calculation uses previously computed distances using the reverse geocoding API from [Geoapify](https://www.geoapify.com/reverse-geocoding-api/). These files are saved under ``api_distance_responses``. 
+* ``--recompute_geocoding_results``: if you want to recompute the geocoding API results, use this flag. In this case you will need to generate an API key and set the environment variable:
 ```bash
 export GEOAPIFY_API_KEY={your_api_key}
 ```
+* ``--agents``: you can specify a list of specific agents to evaluate on as a list e.g. ``--agents GPT4V synthetic_num_examples=1000``
 
 ## Benchmark Your Agents 🚀
 Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{custom_agent_name}_granularity={granularity}.jsonl`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the geocoding-distance-error as discussed previously.

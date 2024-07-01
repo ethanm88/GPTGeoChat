@@ -91,6 +91,7 @@ if __name__ == "__main__":
 
     # save the granularity data
     for granularity in granularity_data:
-        with open(f"{GRANULARITY_RESULTS_DIR}/ground_truth_{granularity}.jsonl", "w") as f:
+        formatted_granularity = granularity.replace(" ", "_")
+        with open(f"{GRANULARITY_RESULTS_DIR}/ground_truth_granularity={formatted_granularity}.jsonl", "w") as f:
             for entry in granularity_data[granularity]:
                 f.write(json.dumps(entry) + "\n")

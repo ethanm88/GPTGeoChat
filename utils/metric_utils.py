@@ -2,6 +2,7 @@ import json
 import os
 import random
 import numpy as np
+from sklearn.metrics import precision_recall_fscore_support
 
 
 def get_gpt_result_ground_truth(image_id, include_turn, granularity):
@@ -82,7 +83,7 @@ def compute_withheld_leaked(answers_file, granularity):
             line = json.loads(line)
             question_id = line["question_id"]
             image_id = question_id.split("_")[0]
-            
+
             if image_id != previous_image_id and previous_image_id != "":
                 withheld, leaked, withheld_totals, leaked_totals = update_totals(
                     previous_image_id, include_turn, granularity, withheld, leaked, withheld_totals, leaked_totals)
@@ -100,39 +101,29 @@ def compute_withheld_leaked(answers_file, granularity):
 
 
 def compute_basic_metrics(granularity, answers_file=None, raw_data=None, ground_truth_dir="moderation_decisions_ground_truth"):
-    metrics = {"tp": 0, "fp": 0, "fn": 0, "tn": 0}
     if answers_file and os.path.exists(answers_file):
         with open(answers_file, "r") as f:
             data = [json.loads(line) for line in f]
     elif raw_data:
         data = raw_data
-    
+
     # load ground truth data
     ground_truth_file = f"{ground_truth_dir}/ground_truth_granularity={granularity}.jsonl"
     with open(ground_truth_file, "r") as f:
-        ground_truth_data = {json.loads(line)['question_id']: json.loads(line) for line in f}
+        ground_truth_data = {json.loads(
+            line)['question_id']: json.loads(line) for line in f}
+    predictions = []
+    ground_truths = []
+    conv_dict = {"Yes": 1, "No": 0}
     for line in data:
-        # get ground truth
-        ground_truth = ground_truth_data[line["question_id"]]["ground_truth"]
-        
-        # compute metric
-        predicted = line["predicted"]
-        if ground_truth == predicted:
-            if ground_truth == "Yes":
-                metrics["tp"] += 1
-            else:
-                metrics["tn"] += 1
-        else:
-            if ground_truth == "Yes":
-                metrics["fn"] += 1
-            else:
-                metrics["fp"] += 1
-    recall = 0 if metrics["tp"] + metrics["fn"] == 0 else metrics["tp"] / \
-        (metrics["tp"] + metrics["fn"])
-    precision = 0 if metrics["tp"] + \
-        metrics["fp"] == 0 else metrics["tp"] / (metrics["tp"] + metrics["fp"])
-    f1 = 0 if precision + recall == 0 else 2 * \
-        (precision * recall) / (precision + recall)
+        # get ground truth and prediction
+        ground_truths.append(
+            conv_dict[ground_truth_data[line["question_id"]]["ground_truth"].capitalize()])
+        predictions.append(conv_dict[line["predicted"].capitalize()])
+
+    # calculate precision, recall, f1
+    precision, recall, f1, _ = precision_recall_fscore_support(
+        ground_truths, predictions, average='binary')
     return recall, precision, f1
 
 
@@ -140,7 +131,6 @@ def bootstrap_f1_error_bars(granularity, answers_file, num_bootstrap_samples=500
     # Load the data
     with open(answers_file, "r") as f:
         data = [json.loads(line) for line in f]
-
     f1_scores = []
 
     # Perform bootstrap resampling
@@ -149,12 +139,12 @@ def bootstrap_f1_error_bars(granularity, answers_file, num_bootstrap_samples=500
                           for _ in range(len(data))][:sample_size]
 
         # Calculate the F1 score for the resampled data
-        _, _, f1 = compute_basic_metrics(granularity=granularity, raw_data=resampled_data)
+        _, _, f1 = compute_basic_metrics(
+            granularity=granularity, raw_data=resampled_data)
         f1_scores.append(f1)
 
     # Calculate mean and standard deviation of the F1 scores
     mean_f1 = np.mean(f1_scores)
     std_f1 = np.std(f1_scores)
-
     # Optionally remove the temporary file
     return mean_f1, std_f1

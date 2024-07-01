@@ -32,7 +32,7 @@
 {"question_id": "1756558634_3", "predicted": "Yes"}
 {"question_id": "2130113429_1", "predicted": "Yes"}
 {"question_id": "2130113429_2", "predicted": "No"}
-{"question_id": "2130113429_3", "predicted": "Times Square"}
+{"question_id": "2130113429_3", "predicted": "No"}
 {"question_id": "2172610585_1", "predicted": "No"}
 {"question_id": "2172610585_2", "predicted": "No"}
 {"question_id": "2172610585_3", "predicted": "No"}
@@ -446,7 +446,7 @@
 {"question_id": "1875599_1", "predicted": "No"}
 {"question_id": "1875599_2", "predicted": "Yes"}
 {"question_id": "1875599_3", "predicted": "No"}
-{"question_id": "1875599_4", "predicted": "Near North Side"}
+{"question_id": "1875599_4", "predicted": "No"}
 {"question_id": "1875599_5", "predicted": "Yes"}
 {"question_id": "1875599_6", "predicted": "Yes"}
 {"question_id": "1255192396_1", "predicted": "No"}
@@ -1475,7 +1475,7 @@
 {"question_id": "523201795_2", "predicted": "No"}
 {"question_id": "523201795_3", "predicted": "No"}
 {"question_id": "523201795_4", "predicted": "No"}
-{"question_id": "523201795_5", "predicted": "La Petite France"}
+{"question_id": "523201795_5", "predicted": "No"}
 {"question_id": "523201795_6", "predicted": "No"}
 {"question_id": "523201795_7", "predicted": "Yes"}
 {"question_id": "1161312523_1", "predicted": "No"}
@@ -1685,7 +1685,7 @@
 {"question_id": "2163174755_4", "predicted": "No"}
 {"question_id": "2163174755_5", "predicted": "No"}
 {"question_id": "2163174755_6", "predicted": "No"}
-{"question_id": "2163174755_7", "predicted": "S\u00ed"}
+{"question_id": "2163174755_7", "predicted": "No"}
 {"question_id": "2163174755_8", "predicted": "No"}
 {"question_id": "2163174755_9", "predicted": "Yes"}
 {"question_id": "1321555016_1", "predicted": "No"}

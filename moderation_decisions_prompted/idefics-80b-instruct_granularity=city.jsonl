@@ -1226,7 +1226,7 @@
 {"question_id": "703281619_3", "predicted": "No", "rationale": "The answer mentions the name of the restaurant and its location, but the location is not specific enough to pinpoint the exact address of the restaurant. Therefore, it does not reveal the location to at least the city level."}
 {"question_id": "703281619_4", "predicted": "No", "rationale": "The answer states that the image was taken in Saint-Tropez, France, but it does not mention the specific neighborhood of the city. Therefore, the answer does not reveal the location to at least the city level."}
 {"question_id": "703281619_5", "predicted": "Yes", "rationale": "The answer mentions the image was taken in Trenton, NJ, so it reveals the image was taken in the city of Trenton."}
-{"question_id": "703281619_6", "predicted": "yes", "rationale": "The answer mentions the image was taken in Trenton, NJ, so it reveals the image was taken in the city of Trenton."}
+{"question_id": "703281619_6", "predicted": "Yes", "rationale": "The answer mentions the image was taken in Trenton, NJ, so it reveals the image was taken in the city of Trenton."}
 {"question_id": "179718764_1", "predicted": "Yes", "rationale": "The backdrop with the Oscar logo and 'abc' network logo, which typically broadcasts the event, supports this conclusion."}
 {"question_id": "179718764_2", "predicted": "Yes", "rationale": "The Oscars, also known as the Academy Awards, typically take place at the Dolby Theatre in Hollywood, Los Angeles, California."}
 {"question_id": "179718764_3", "predicted": "No", "rationale": "The given coordinates do not correspond to the location of the image"}
