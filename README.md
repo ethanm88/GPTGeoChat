@@ -85,15 +85,13 @@ We provide moderation decisions for all baseline, finetuned, and prompted agents
 Follow the following steps to generate experimental results from the paper:
 1. Clone the repository:
 ```bash 
-git clone https://github.com/ethanm88/GPTGeoChat.git
+git clone https://github.com/ethanm88/GPTGeoChat.git && cd GPTGeoChat
 ```
-2. Download GPTGeoChat:
-```bash
-wget https://download943.mediafire.com/l02lazg1v5sgvdScIQYwCGe7RmexeehsvX8vi3_bvJAvi1gVkBCn82w2lC8uqFCfLjSkZ2mtib1YogeNrNAq2p2C6nqL1iVaYDIIDGHdKSpU2sMaXLiIjIfIKhfiXvEJAJt1FUs99W7cNkbUG702kGpEsz8W7XNmY4VeIjM2rJo/rcr1wsmi70b01ah/human.zip
-```
+2. Download [GPTGeoChat](https://www.mediafire.com/file/rcr1wsmi70b01ah/human.zip/file) in the ``GPTGeoChat`` directory.
+
 3. Unzip GPTGeoChat:
 ```bash
-mkdir gptgeochat & unzip human.zip -d gptgeochat/ & rm human.zip
+mkdir gptgeochat && unzip human.zip -d gptgeochat/ && rm human.zip
 ```
 4. Generate Ground Truth Files. This will generate two directories, `moderation_decisions_ground_truth` and `gptgeochat/human/ground_truth_results` which aggregate ground truth results differently for efficient computation:
 ```bash
