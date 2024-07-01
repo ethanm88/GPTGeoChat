@@ -114,6 +114,6 @@ export GEOAPIFY_API_KEY={your_api_key}
 * ``--agents``: you can specify a list of specific agents to evaluate on as a list e.g. ``--agents GPT4V synthetic_num_examples=1000``
 
 ## Benchmark Your Agents 🚀
-Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{custom_agent_name}_granularity={granularity}.jsonl`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the geocoding-distance-error as discussed previously.
+Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{custom_agent_name}_granularity={granularity}.jsonl`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the ``geocoding-distance-error`` as discussed previously.
 
 ## Citation ✍️
