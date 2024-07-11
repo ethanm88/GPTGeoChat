@@ -117,3 +117,14 @@ export GEOAPIFY_API_KEY={your_api_key}
 Benchmarking custom agents is easy! Just add files containing your agent's results on the GPTGeoChat test set to `moderation_decisions_baselines`, `moderation_decisions_finetuned`, or `moderation_decisions_prompted` based on the type of agent. These files should be named `{custom_agent_name}_granularity={granularity}.jsonl`. Running `generate_eval_metrics.py` with the correct arguments will then evaluate your agents. Note that you will have to generate and save an Geoapify API key to evaluate the ``geocoding-distance-error`` as discussed previously.
 
 ## Citation ✍️
+```
+@misc{mendes2024granularprivacycontrol,
+      title={Granular Privacy Control for Geolocation with Vision Language Models}, 
+      author={Ethan Mendes and Yang Chen and James Hays and Sauvik Das and Wei Xu and Alan Ritter},
+      year={2024},
+      eprint={2407.04952},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.04952}, 
+}
+```
