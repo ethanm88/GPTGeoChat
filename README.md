@@ -4,7 +4,7 @@ Repository for "Granular Privacy Control for Geolocation with Vision Language Mo
 ## Main Datasets 🗎
 ### Downloads and Directory Structure ⬇️
 The full human annotated GPTGeoChat and AI-generated GPTGeoChat<sub>Synthetic</sub> are available for download at the following links:
-* [GPTGeoChat (506 MB)](https://www.mediafire.com/file/rcr1wsmi70b01ah/human.zip/file)
+* [GPTGeoChat (1.43 GB)](https://www.mediafire.com/file/luwlv2p9ofgxdb5/human.zip/file)
 * [GPTGeoChat<sub>Synthetic</sub> (227 MB)](https://www.mediafire.com/file/chvqvde6xm7ofqa/synthetic.zip/file)
 
 The directory structure of GPTGeoChat:
