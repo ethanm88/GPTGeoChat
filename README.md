@@ -87,7 +87,7 @@ Follow the following steps to generate experimental results from the paper:
 ```bash 
 git clone https://github.com/ethanm88/GPTGeoChat.git && cd GPTGeoChat
 ```
-2. Download [GPTGeoChat](https://www.mediafire.com/file/rcr1wsmi70b01ah/human.zip/file) in the ``GPTGeoChat`` directory.
+2. Download [GPTGeoChat](https://www.mediafire.com/file/luwlv2p9ofgxdb5/human.zip/file) in the ``GPTGeoChat`` directory.
 
 3. Unzip GPTGeoChat:
 ```bash
