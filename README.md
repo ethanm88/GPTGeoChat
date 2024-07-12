@@ -91,7 +91,7 @@ git clone https://github.com/ethanm88/GPTGeoChat.git && cd GPTGeoChat
 
 3. Unzip GPTGeoChat:
 ```bash
-mkdir gptgeochat && unzip human.zip -d gptgeochat/ && rm human.zip
+mkdir gptgeochat && unzip human.zip && rm human.zip
 ```
 4. Generate Ground Truth Files. This will generate two directories, `moderation_decisions_ground_truth` and `gptgeochat/human/ground_truth_results` which aggregate ground truth results differently for efficient computation:
 ```bash
