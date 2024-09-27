@@ -1,5 +1,5 @@
 # GPTGeoChat🌎: Benchmarking Conversational Geolocation 
-Repository for "Granular Privacy Control for Geolocation with Vision Language Models"
+Repository for [Granular Privacy Control for Geolocation with Vision Language Models](https://arxiv.org/abs/2407.04952)
 
 ## Main Datasets 🗎
 ### Downloads and Directory Structure ⬇️
