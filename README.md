@@ -127,4 +127,8 @@ Benchmarking custom agents is easy! Just add files containing your agent's resul
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2407.04952}, 
 }
+
 ```
+## Acknowledgement
+We thank Azure’s Accelerate Foundation Models Research Program for graciously providing access to API-based ``GPT-4o``.
+This research is supported in part by the NSF (IIS-2052498, IIS-2144493 and IIS-2112633), ODNI, and IARPA via the HIATUS program (2022-22072200004). The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of NSF, ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for governmental purposes notwithstanding any copyright annotation therein.
