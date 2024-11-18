@@ -118,14 +118,25 @@ Benchmarking custom agents is easy! Just add files containing your agent's resul
 
 ## Citation ✍️
 ```
-@misc{mendes2024granularprivacycontrol,
-      title={Granular Privacy Control for Geolocation with Vision Language Models}, 
-      author={Ethan Mendes and Yang Chen and James Hays and Sauvik Das and Wei Xu and Alan Ritter},
-      year={2024},
-      eprint={2407.04952},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.04952}, 
+@inproceedings{mendes-etal-2024-granular,
+    title = "Granular Privacy Control for Geolocation with Vision Language Models",
+    author = "Mendes, Ethan  and
+      Chen, Yang  and
+      Hays, James  and
+      Das, Sauvik  and
+      Xu, Wei  and
+      Ritter, Alan",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.957",
+    pages = "17240--17292",
+    abstract = "Vision Language Models (VLMs) are rapidly advancing in their capability to answer information-seeking questions. As these models are widely deployed in consumer applications, they could lead to new privacy risks due to emergent abilities to identify people in photos, geolocate images, etc. As we demonstrate, somewhat surprisingly, current open-source and proprietary VLMs are very capable image geolocators, making widespread geolocation with VLMs an immediate privacy risk, rather than merely a theoretical future concern. As a first step to address this challenge, we develop a new benchmark, GPTGeoChat, to test the capability of VLMs to moderate geolocation dialogues with users. We collect a set of 1,000 image geolocation conversations between in-house annotators and GPT-4v, which are annotated with the granularity of location information revealed at each turn. Using this new dataset we evaluate the ability of various VLMs to moderate GPT-4v geolocation conversations by determining when too much location information has been revealed. We find that custom fine-tuned models perform on par with prompted API-based models when identifying leaked location information at the country or city level, however fine-tuning on supervised data appears to be needed to accurately moderate finer granularities, such as the name of a restaurant or building.",
 }
 
 ```
